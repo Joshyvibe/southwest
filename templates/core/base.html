@@ -1,0 +1,21 @@
+{% extends 'finance/base.html' %}
+{% block title %}
+Home
+{% endblock %}
+{% load static %}
+
+{% block content %}
+
+    <body class="bg-gray-100">
+        {% block body %}
+            {% include 'core/navbar.html' %}
+            <div class="lg:container lg:mx-auto">
+                {% include 'core/messages.html' %}
+                <!-- Add content here -->
+                {% endblock %}
+            </div>
+            {% include 'core/footer.html' %}
+
+        {% endblock %}
+        {% block footer_extra %}{% endblock %}
+    </body>

@@ -1,0 +1,26 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="data.EX.signup.firstname_entry" />
+          <option value="data.EX.login.account_info_frame" />
+          <option value="data.EX.login.label" />
+          <option value="data.EX.login.home_frame" />
+          <option value="data.EX.signup.lastname_entry" />
+          <option value="data.EX.signup.email_entry" />
+          <option value="data.EX.signup.phone_entry" />
+          <option value="data.EX.signup.address_entry" />
+          <option value="data.EX.signup.dob_entry" />
+          <option value="data.EX.signup.gender_entry" />
+          <option value="data.EX.signup.accounttype_entry" />
+          <option value="data.EX.signup.username_entry" />
+          <option value="data.EX.signup.password_entry" />
+          <option value="data.EX.signup.tranPIN_entry" />
+          <option value="data.EX.signup.firstname" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

@@ -1,0 +1,23 @@
+{% extends 'core/base.html' %}
+
+{% block head_title %}Banking System{% endblock %}
+
+{% block content %}
+<main style="height: 470px;">
+     <h1 class="font-mono font-bold text-3xl text-center pb-5 pt-10" style="font-size: 25px; font-family:serif; color: #222921;">{{ title }}</h1>
+     <h2 style="font-size: 16px; font-style: sans-serif; color: #2b2828;">Account Name:  {{ user.first_name}}  {{ user.last_name}}<br><br>Account No:  {{ user.account}}<br>Balance:  ${{ user.balance}}</h2>
+    <hr>
+    <hr>
+    <br>
+    <h2 style="font-size: 16px; font-style: Sans-serif; color: #2b2828;">Please confirm account name</h2>
+    <div class="col-12">
+        <a href="{% url 'finance:success' %}" class="btn btn-primary" style="position: absolute; top: 155px; color: #2b2828;" type="submit">Submit</a>
+    </div>
+    {% if accounts %}
+        <p style="font-size: 30px; color: #852821; ">{{ accounts.firstname}} {{ accounts.lastname}}</p>
+    {% else %}
+        <p style="font-size: 40px; color: red; ">There is no account matching your search!</p>
+    {% endif %}
+</main>
+
+{% endblock content %}</title>

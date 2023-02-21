@@ -1,0 +1,54 @@
+{% extends 'core/base.html' %}
+
+{% block head_title %}Banking System{% endblock %}
+
+{% block content %}
+
+{% load humanize %}
+<main style="height: 500px; position: relative; left: 50px;">
+    <h1 class="font-mono font-bold text-3xl text-center pb-5 pt-10" style="font-size: 25px; font-family:serif; color: #2b2828;">{{ title }}</h1>
+    <h2 style="font-size: 18px; font-style: sans-serif; color: #2b2828;">Account Name: {{ user.first_name}}  {{ user.last_name}}<br><br>Account No: {{ user.account}}<br><br>Balance:  $ {{ user.balance|intcomma }}</h2>
+    <hr />
+    <br>
+    <form method="get" action="{% url 'finance:search' %}" class="row g-3" novalidate>
+      <div class="col-md-4 position-relative">
+        <label for="validationTooltip01" class="form-label" style="border-radius: 5px; color: black; border-size: 5px; ">Enter Account number</label>
+        <input style="width: 330px;" type="number" name="query" class="form-control" id="validationTooltip01" required>
+        <div class="valid-tooltip">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-4 position-relative">
+        <label for="validationTooltip02" class="form-label" style="border-radius: 5px; color: black;">Enter Routing number</label>
+        <input style="width: 330px;" type="number" class="form-control" id="validationTooltip02" required>
+        <div class="valid-tooltip">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-4 position-relative">
+        <label for="validationTooltip03" class="form-label" style="border-radius: 5px; color: black;">Enter Bank Name</label>
+        <input style="width: 330px;" type="text" class="form-control" id="validationTooltip03" required>
+        <div class="valid-tooltip">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-4 position-relative">
+        <label for="validationTooltip04" class="form-label" style="border-radius: 5px; color: black;">Enter Transfer Amount</label>
+        <input style="width: 330px;" type="number" class="form-control" id="validationTooltip04" required>
+        <div class="valid-tooltip">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-4 position-relative">
+        <label for="validationTooltip05" class="form-label" style="border-radius: 5px; color: black;">Enter PIN</label>
+        <input style="width: 330px;" type="number" class="form-control" id="validationTooltip05" required>
+        <div class="valid-tooltip">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-12">
+        <button class="btn btn-primary" style="position: absolute; top: 15px;" type="submit">Submit</button>
+      </div>
+    </form>
+</main>
+{% endblock content %}</title>
