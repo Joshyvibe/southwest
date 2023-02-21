@@ -60,70 +60,43 @@
           <div class="col-6 col-xl-2">
             <h1 class="mb-0 site-logo"><a href="{% url 'home' %}" class="h2 mb-0"style="font-size: 20px;"><img class="brand-logo-dark" src="{% static 'images/southwest.png' %}" alt="" width="260" height="40"><span class="text-primary"></span> </a></h1>
           </div>
-
           <div class="col-12 col-md-10 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
                 {% if request.user.is_authenticated %}
-                <div class="text-md lg:flex-grow">
-                    <a href="{% url 'transactions:transaction_report' %}" class="nav-link" style="border-radius: 15px;">
-                        Transaction Report
-                    </a>
-                    <a href="{% url 'transactions:deposit_money' %}" class="nav-link">
-                        Deposit
-                    </a>
-                    <a href="{% url 'transactions:withdraw_money' %}" class="nav-link">
-                        Withdraw
-                    </a>
-                    <a href="{% url 'finance:transfer_form' %}" class="nav-link">
-                        Transfer
-                    </a>
-                    <a href="{% url 'accounts:user_logout' %}" class="nav-link">
-                      Logout</a>
-                </div>
+                  <a href="{% url 'home' %}" class="nav-link">Home</a>
+                  <a href="{% url 'transactions:transaction_report' %}" class="nav-link" style="border-radius: 15px;">Transaction Report</a>
+                  <a href="{% url 'transactions:deposit_money' %}" class="nav-link">Deposit</a>
+                  <a href="{% url 'transactions:withdraw_money' %}" class="nav-link">Withdraw</a>
+                  <a href="{% url 'finance:transfer_form' %}" class="nav-link">Transfer</a>
+                  <a href="{% url 'accounts:user_logout' %}" class="nav-link">Logout</a>
                 {% else %}
-                <div class="text-md lg:flex-grow">
-                    <a href="{% url 'home' %}" class="nav-link">Home</a>
-                    <a href="{% url 'accounts:user_registration' %}" class="nav-link">Register</a>
-                    <a href="{% url 'accounts:user_login' %}"  class="nav-link">Login</a>
-                </div>
+                  <a href="{% url 'home' %}" class="nav-link">Home</a>
+                  <a href="{% url 'accounts:user_registration' %}" class="nav-link">Register</a>
+                  <a href="{% url 'accounts:user_login' %}"  class="nav-link">Login</a>
                   <li class="has-children">
-                  <a href="#about-section" class="nav-link">About Us</a>
-                  <ul class="dropdown">
-                    <li><a href="#team-section" class="nav-link">Team</a></li>
-                    <li><a href="#pricing-section" class="nav-link">Pricing</a></li>
-                    <li><a href="#faq-section" class="nav-link">FAQ</a></li>
-                    <li><a href="#gallery-section" class="nav-link">Gallery</a></li>
-                    <li><a href="#services-section" class="nav-link">Services</a></li>
-                    <li><a href="#testimonials-section" class="nav-link">Testimonials</a></li>
-                    <li class="has-children">
-                      <a href="#">More Links</a>
-                      <ul class="dropdown">
-                        <li><a href="#">Menu One</a></li>
-                        <li><a href="#">Menu Two</a></li>
-                        <li><a href="#">Menu Three</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-
-                <li><a href="#blog-section" class="nav-link">Blog</a></li>
-                <li><a href="#contact-section" class="nav-link">Contact</a></li>
-                <li class="social"><a href="#contact-section" class="nav-link"><span class="icon-facebook"></span></a></li>
-                <li class="social"><a href="#contact-section" class="nav-link"><span class="icon-twitter"></span></a></li>
-                <li class="social"><a href="#contact-section" class="nav-link"><span class="icon-linkedin"></span></a></li>
+                    <a href="#about-section" class="nav-link">About Us</a>
+                    <ul class="dropdown">
+                      <li><a href="#team-section" class="nav-link">Team</a></li>
+                      <li><a href="#pricing-section" class="nav-link">Pricing</a></li>
+                      <li><a href="#faq-section" class="nav-link">FAQ</a></li>
+                      <li><a href="#gallery-section" class="nav-link">Gallery</a></li>
+                      <li><a href="#services-section" class="nav-link">Services</a></li>
+                      <li><a href="#testimonials-section" class="nav-link">Testimonials</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#blog-section" class="nav-link">Blog</a></li>
+                  <li><a href="#contact-section" class="nav-link">Contact</a></li>
+                  <li class="social"><a href="#contact-section" class="nav-link"><span class="icon-facebook"></span></a></li>
+                  <li class="social"><a href="#contact-section" class="nav-link"><span class="icon-twitter"></span></a></li>
+                  <li class="social"><a href="#contact-section" class="nav-link"><span class="icon-linkedin"></span></a></li>
+                  {% endif %}
               </ul>
-
-              {% endif %}
             </nav>
           </div>
-
-
           <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="{% url 'home' %}" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
-
         </div>
       </div>
-
     </header>
 
 
