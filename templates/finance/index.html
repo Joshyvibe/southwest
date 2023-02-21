@@ -65,12 +65,6 @@
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
                 {% if request.user.is_authenticated %}
-                <nav class="nav">
-                  <a class="nav-link active" aria-current="page" href="#">Active</a>
-                  <a class="nav-link" href="#">Link</a>
-                  <a class="nav-link" href="#">Link</a>
-                  <a class="nav-link disabled">Disabled</a>
-              </nav>
                 <div class="text-md lg:flex-grow">
                     <a href="{% url 'transactions:transaction_report' %}" class="nav-link" style="border-radius: 15px;">
                         Transaction Report
@@ -87,12 +81,13 @@
                     <a href="{% url 'accounts:user_logout' %}" class="nav-link">
                       Logout</a>
                 </div>
-
                 {% else %}
-                <li><a href="{% url 'home' %}" class="nav-link">Home</a></li>
-                <li><a href="{% url 'accounts:user_registration' %}" class="nav-link">Register</a></li>
-                <li><a href="{% url 'accounts:user_login' %}"  class="nav-link">Login</a></li>
-                <li class="has-children">
+                <div class="text-md lg:flex-grow">
+                    <a href="{% url 'home' %}" class="nav-link">Home</a>
+                    <a href="{% url 'accounts:user_registration' %}" class="nav-link">Register</a>
+                    <a href="{% url 'accounts:user_login' %}"  class="nav-link">Login</a>
+                </div>
+                  <li class="has-children">
                   <a href="#about-section" class="nav-link">About Us</a>
                   <ul class="dropdown">
                     <li><a href="#team-section" class="nav-link">Team</a></li>
@@ -112,13 +107,13 @@
                   </ul>
                 </li>
 
-
                 <li><a href="#blog-section" class="nav-link">Blog</a></li>
                 <li><a href="#contact-section" class="nav-link">Contact</a></li>
                 <li class="social"><a href="#contact-section" class="nav-link"><span class="icon-facebook"></span></a></li>
                 <li class="social"><a href="#contact-section" class="nav-link"><span class="icon-twitter"></span></a></li>
                 <li class="social"><a href="#contact-section" class="nav-link"><span class="icon-linkedin"></span></a></li>
               </ul>
+
               {% endif %}
             </nav>
           </div>
