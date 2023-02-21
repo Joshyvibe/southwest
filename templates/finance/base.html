@@ -81,11 +81,12 @@
                     <a href="{% url 'accounts:user_logout' %}" class="nav-link">
                       Logout</a>
                 </div>
-
                 {% else %}
-                <li><a href="{% url 'home' %}" class="nav-link">Home</a></li>
-                <li><a href="{% url 'accounts:user_registration' %}" class="nav-link">Register</a></li>
-                <li><a href="{% url 'accounts:user_login' %}"  class="nav-link">Login</a></li>
+                <div class="text-md lg:flex-grow">
+                    <a href="{% url 'home' %}" class="nav-link">Home</a>
+                    <a href="{% url 'accounts:user_registration' %}" class="nav-link">Register</a>
+                    <a href="{% url 'accounts:user_login' %}"  class="nav-link">Login</a>
+                </div>
                 <li class="has-children">
                   <a href="#about-section" class="nav-link">About Us</a>
                   <ul class="dropdown">
