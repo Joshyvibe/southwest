@@ -5,7 +5,7 @@
 {% block content %}
 
 {% load humanize %}
-<main style="height: 500px; position: relative; left: 50px;">
+<main style="height: 800px; position: relative; left: 50px;">
     <h1 class="font-mono font-bold text-3xl text-center pb-5 pt-10" style="font-size: 25px; font-family:serif; color: #2b2828;">{{ title }}</h1>
     <h2 style="font-size: 18px; font-style: sans-serif; color: #2b2828;">Account Name: {{ user.first_name}}  {{ user.last_name}}<br><br>Account No: {{ user.account}}<br><br>Balance:  $ {{ user.balance|intcomma }}</h2>
     <hr />
